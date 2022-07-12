@@ -1,0 +1,33 @@
+{
+    "college1": {
+      "id":1,
+      "name": "collegeName1",
+      "location": "collegeLocation1",
+      "imageurl" :"someImageUrl1",
+      "contact" : "Contact1"
+    },
+  
+    "college2": {
+      "id":2,
+      "name": "collegeName2",
+      "location": "collegeLocation2",
+      "imageurl" :"someImageUrl2",
+      "contact" : "Contact2"
+    },
+  
+    "college3": {
+      "id":3,
+      "name": "collegeName3",
+      "location": "collegeLocation3",
+      "imageurl" :"someImageUrl3",
+      "contact" : "Contact3"
+    },
+  
+    "college4": {
+      "id":4,
+      "name": "collegeName4",
+      "location": "collegeLocation4",
+      "imageurl" :"someImageUrl4",
+      "contact" : "Contact4"
+    }
+  }

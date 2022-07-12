@@ -1,20 +1,19 @@
-const express = require('express');
+var express = require('express'); // require the express framework
+var app = express();
+var fs = require('fs'); //require file system object
 const port = process.env.port || process.env.port || 5000;
 
-const app = express();
-
-
-//add the college information here in the same format
-var collegesInformations = [ 
-    {"id":1,"name":"collegeName", "location":"collegeLocation", "contact":"collegeContact"}, 
-    {"id":2,"name":"collegeName", "location":"collegeLocation2", "contact":"collegeContact2"}, 
-    {"id":3,"name":"collegeName", "location":"collegeLocation3", "contact":"collegeContact3"}, 
- ];
-
-app.get('/collegeinfo', (req,res)=> {
-    res.status(200).send(collegesInformations);
+// Endpoint to Get a list of collegesInformation
+app.get('/collegeinfo', function(req, res){
+    fs.readFile(__dirname + "/" + "colleges.json", 'utf8', function(err, data){
+        // console.log(data);
+        res.end(data); // you can also use res.send()
+    });
 })
 
-app.listen(port, ()=>{
-    console.log('running!');
-});
+// Create a server to listen at port 8080
+var server = app.listen(port, function(){
+    var host = server.address().address
+    var port = server.address().port
+    console.log(`Listening to port ${port}`);
+})
